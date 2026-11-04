@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Phantom Parade | Package Recommender</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="favicon/ghost.svg">
+</head>
+<body>
+  <header class="nav">
+    <a class="logo" href="index.html">Phantom Parade</a>
+    <nav>
+      <a href="index.html">Founder</a>
+      <a href="recommender.html" class="active">Kiosk</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="panel recommender-layout">
+      <h1>Find your package</h1>
+      <p>Answer five questions and we will match you with a package.</p>
+
+      <form id="hauntForm" novalidate>
+        <label for="fullName">Full name</label>
+        <input type="text" id="fullName" placeholder="e.g. Rafli Samad">
+
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="you@example.com">
+
+        <label for="level">Fright Factor</label>
+        <select id="level">
+          <option value="">Select level</option>
+          <option value="mild">Mild</option>
+          <option value="moderate">Moderate</option>
+          <option value="severe">Severe</option>
+        </select>
+
+        <label for="rooms">Number of affected rooms (1 to 20)</label>
+        <input type="number" id="rooms" min="1" max="20" step="1" placeholder="e.g. 3">
+
+        <label for="activity">Paranormal activity</label>
+        <select id="activity">
+          <option value="">Select activity</option>
+          <option value="noises">Strange noises</option>
+          <option value="sightings">Frequent sightings</option>
+          <option value="aggressive">Aggressive behaviour</option>
+        </select>
+
+        <div class="actions">
+          <button type="submit" class="btn">Find my package</button>
+          <button type="reset" class="btn secondary">Reset form</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="result" class="panel result" hidden aria-live="polite"></section>
+    <section class="panel rules">
+      <h2>How we decide</h2>
+      <ul>
+        <li><strong>Bomoh ProMax (RM999.00):</strong> severe haunting, OR aggressive behaviour, OR 10 to 20 rooms.</li>
+        <li><strong>Seram Standard (RM499.00):</strong> moderate haunting, OR frequent sightings, OR 2 to 9 rooms.</li>
+        <li><strong>Bisik-Bisik Basic (RM199.00):</strong> anything else (mild, strange noises, 1 room).</li>
+      </ul>
+    </section>
+  </main>
+
+  <div id="jumpscare" class="jumpscare" hidden aria-hidden="true">
+    <img src="images/ghost.jpg" alt="">
+  </div>
+  <audio id="scareSound" src="audio/scary.mp3" preload="auto"></audio>
+
+    <footer>
+    <p>&copy; 2026 Phantom Parade. All rights reserved.</p>
+    <p>We handle the supernatural. You handle the popcorn.</p>
+  </footer>
+  <script src="js/script.js"></script>
+</body>
+</html>

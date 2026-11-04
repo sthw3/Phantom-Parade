@@ -11,7 +11,7 @@
 
 @font-face {
   font-family: "Parade";
-  src: url("fonts/Heavytal.ttf") format("truetype");
+  src: url("../fonts/Heavytal.ttf") format("truetype");
   font-weight: 400;
   font-display: swap;
 }
